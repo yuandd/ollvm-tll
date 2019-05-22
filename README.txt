@@ -46,3 +46,8 @@ cp -rf ($BUILD_OLLVM)/lib .
 # This code repo is similar to the previous work of Qrilee:
 https://github.com/Qrilee/Obfuscator-LLVM
 The reason why I redo it is because from NDKr17, it will use clang 6.0. And by default there is parameter "-nostdlib++", which is not supported by the LLVM version he did. There are several hassles when trying to use OLLVM on Android studio. Above steps are the easiest way to compile your NDK project with obfuscation using OLLVM+String OBFU
+
+##############2019.5.22 add ####
+include/llvm/Transforms/Obfuscation/StringObfuscation.h
+lib/Transforms/Obfuscation/StringObfuscation.cpp
+调整了这两个文件，处理部分字符串没有混淆的问题
